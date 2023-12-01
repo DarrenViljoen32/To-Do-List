@@ -63,5 +63,4 @@ function deleteItem(id){
     list = list.filter(item => item.id !== id);
     displayList();
 }
-
 displayList();
