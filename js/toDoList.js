@@ -48,8 +48,19 @@ function displayList(){
 
         tab.appendChild(itemName);
 
+        let deleteBtn = document.createElement(`button`);
+        deleteBtn.textContent = `x`;
+        deleteBtn.addEventListener(`click`, function(){
+            deleteItem(obj.id);
+        })
+
+        tab.appendChild(deleteBtn);
         displayList.appendChild(tab);
     });
 }
 
+function deleteItem(id){
+    list = list.filter(item => item.id !== id);
+    displayList();
+}
 displayList();
