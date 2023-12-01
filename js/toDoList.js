@@ -43,6 +43,24 @@ function displayList(){
     list.forEach(function(obj){
         let tab = document.createElement(`tr`);
 
+        let checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = obj.completed;
+        checkbox.addEventListener('change', function(){
+            //change the completion status when the checkbox is clickd.
+            toggleCompleted(obj.id);                
+        });
+
+        let itemName = document.createElement('span');
+        itemName.textContent = obj.name;
+
+        tab.appendChild(checkbox);
+        tab.appendChild(itemName);
+
+        if (obj.completed) {
+            tab.classList.add('completed');
+        }
+
         let itemName = document.createElement('span');
         itemName.textContent = obj.name;
 
@@ -59,8 +77,19 @@ function displayList(){
     });
 }
 
+function toggleCompleted(id){
+    list = list.map(item => {
+        if (item.id === id) {
+            item.completed = !item.completed;
+        }
+        return item;
+    });
+    displayList();
+}
+
 function deleteItem(id){
     list = list.filter(item => item.id !== id);
     displayList();
 }
+
 displayList();
