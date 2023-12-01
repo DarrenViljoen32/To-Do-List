@@ -61,6 +61,11 @@ function displayList(){
             tab.classList.add('completed');
         }
 
+        let itemName = document.createElement('span');
+        itemName.textContent = obj.name;
+
+        tab.appendChild(itemName);
+
         let deleteBtn = document.createElement(`button`);
         deleteBtn.textContent = `x`;
         deleteBtn.addEventListener(`click`, function(){
