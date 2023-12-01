@@ -1,4 +1,180 @@
+body{
+    background-color: floralwhite;
+    font-size: xx-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: black;
+    padding-top: 2%;
+    padding-bottom: 20%;
+    width: 100%;
+}
+#heading{
+    color: black;
+}
+button{
+    font-size: x-large;
+    border-radius: 25%;
+    border-color: black;
+    background-color: red;
+    color: floralwhite;
+    height: auto;
+    width: 30px;
+    margin-left: 0%;
+    cursor: pointer;
+}
+button:hover{
+    background-color: floralwhite;
+    color: black;
+    border-color: black
+}
+#sortBtn, #addBtn{
+    height: 75px;
+    width: 100px;
+    margin-left: 0px;
+    background-color: #000030;
+    color: floralwhite;
+    border-color: black;
+}
+#sortBtn:hover, #addBtn:hover{
+    background-color: floralwhite;
+    color: black;
+    border-color: #000030;
+}
+input{
+    font-size: x-large;
+    height: 50px;
+    text-align: center;
+}
+input[type="checkbox"]{
+    margin-right: 0%;
+    padding-left: 0%;
+    width: 25px;
+}
+span{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: solid;
+}
+tr{
+    border-bottom: 2px solid floralwhite;
+}
+
 .completed{
     text-decoration: line-through;
     color: red;
+}
+.completed span{
+    color: floralwhite;
+}
+#validation{
+    color: red;
+}
+#display{
+    background-color: #000030;
+    color: floralwhite;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 720px) {
+    body{
+        font-size: x-large;
+    }
+    button{
+        font-size: x-large;
+        border-radius: 25%;
+        height: auto;
+        width: 30px;
+        margin-left: 13%;
+        cursor: pointer;
+    }
+    #sortBtn, #addBtn{
+        height: 40px;
+        width: 60px;
+        margin: 10px;
+        background-color: #000030;
+        color: floralwhite;
+        border-color: black;
+    }
+    input{
+        font-size: x-large;
+        height: 25px;
+        text-align: center;
+    }
+    input[type="checkbox"]{
+        margin-right: 20%;
+        padding-left: 50%;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body{
+        font-size: large;
+    }
+    button{
+        font-size: large;
+        border-radius: 25%;
+        height: auto;
+        width: 25px;
+        margin-left: 0%;
+        cursor: pointer;
+    }
+    #sortBtn, #addBtn{
+        height: 40px;
+        width: 60px;
+        margin: 10px;
+        margin-right: 70px;
+        background-color: #000030;
+        color: floralwhite;
+        border-color: black;
+    }
+    input{
+        font-size: large;
+        height: 25px;
+        text-align: center;
+        padding-left: 0%;
+        margin-left: 0px;
+    }
+    input[type="checkbox"]{
+        margin-right: 0%;
+        padding-left: 0%;
+        width: 15px;
+    }
+}
+@media screen and (max-width: 300px) {
+    body{
+        font-size: large;
+    }
+    button{
+        font-size: large;
+        border-radius: 25%;
+        height: auto;
+        width: 25px;
+        margin-left: 0%;
+        cursor: pointer;
+    }
+    #sortBtn, #addBtn{
+        height: 40px;
+        width: 60px;
+        margin: 10px;
+        background-color: #000030;
+        color: floralwhite;
+        border-color: black;
+    }
+    input{
+        font-size: large;
+        height: 25px;
+        text-align: center;
+        padding-left: 0%;
+    }
+    input[type="checkbox"]{
+        margin-right: 0%;
+        padding-left: 0%;
+        width: 15px;
+    }
 }
