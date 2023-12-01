@@ -2,6 +2,7 @@ let list = [];
 let idCounter = 0;
 
 let addButton = document.querySelector(`#addBtn`);
+let sortButton = document.querySelector(`#sortBtn`);
 
 addButton.addEventListener(`click`, function(){
     let inputValue = document.querySelector(`#inputValue`).value;
@@ -27,6 +28,13 @@ addButton.addEventListener(`click`, function(){
     }
         
 });
+
+sortButton.addEventListener(`click`, sortList);
+
+function sortList(){
+    list.sort((a, b) => a.name.localeCompare(b.name));
+    displayList();
+}
 
 function displayList(){
     let displayList = document.querySelector(`#display`);
